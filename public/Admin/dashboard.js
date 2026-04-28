@@ -57,7 +57,7 @@ async function porcetaje() {
   //Calculamos el porcentaje (evitando dividir por cero si la tabla está vacía)
   const porcentaje = total > 0 ? ((aprobados / total) * 100).toFixed(1) : 0;
 
-  //Lo mostramos en un elemento de tu UI
+  //Lo mostramos en un elemento de tu UIgi
   document.getElementById("tasa-aprobacion").innerText = `${porcentaje}%`;
 }
 
