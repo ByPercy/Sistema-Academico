@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Panel Administrador</title>
+    <link rel="stylesheet" href="ges-matricula.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h3>Sistema Academico</h3>
+      <h2>Administrador</h2>
+      <hr class="Linea"></hr>
+     <ul>
+          <li><img src="../icons/icon1_dashboard.png" alt=""><a href="dashboard.html">Dashboard</a></li>
+          <li><img src="../icons/icon2_students.png" alt=""><a href="ges-estudian.html">Gestionar Estudiantes</a></li>
+          <li><img src="../icons/icon3_docente.png" alt=""><a href="ges-Docent.html">Gestionar Docentes</a></li>
+          <li><img src="../icons/icon_book_final.png" alt=""><a href="ges-curso.html">Gestionar Cursos</a></li>
+          <li><img src="../icons/icon5_matricula.png" alt=""><a href="ges-matricula.html">Matrículas</a></li>
+          <li><img src="../icons/icon_logout.png" alt=""><a href="../index.html">Cerrar sesión</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+      <h1>Matricula Estudiantes</h1>
+      <p>Matricula estudiantes en los cursos disponibles</p>
+
+      <div class="cards2">
+        <div class="card2">
+            <h3>Nueva Matricula</h3>
+            <p>Seleccionar Estudiante</p>
+            <select id="select-estud">
+              <option value="">Cargando estudiantes...</option>
+            </select>
+
+            <p>Seleccionar Curso</p>
+            <select id="select-curso">
+              <option value="">Cargando cursos...</option>
+            </select>
+            <BR></BR>
+            <button id="btn-matricular">MATRICULAR</button>
+        </div>
+
+        <div class="card2">
+            <h3>Matricula Registradas</h3>
+             <table id="tabla-estudiantes">
+              <thead>
+                  <tr>
+                      <th>Codigo-Est.</th>
+                      <th>Estudiante</th>
+                      <th>Codigo-Curso</th>
+                      <th>Curso</th>
+                      <th>Fecha Matricula</th>
+                      <th>Acciones</th>
+                  </tr>
+              </thead>
+              <tbody id="tabla-cuerpo">
+                  <tr>
+                      <td>EST1</td>
+                      <td>Juan Perez</td>
+                      <td>JoseMarcos@Educ.pe</td>
+                      <td>123456789</td>
+                      <td id="Estado-columna"><span class="estado">Activo</span></td>
+                      <td>
+                          <button id="btn-eliminar" onclick="eliminarEstudiante(1)"><img src="../icons/icon_basura.png" alt=""></button>
+
+                      </td>
+                  </tr>
+              </tbody>
+            </table>
+        </div>
+        
+      </div>
+
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="matricula.js"></script>
+  </body>
+</html>

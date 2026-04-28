@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sistema Académico</title>
+    <link rel="stylesheet" href="estudiante.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h3>Sistema Academico</h3>
+      <h2>Estudiante</h2>
+      <hr class="Linea" />
+      <ul>
+        <li><a href="estudiante.html">Dashboard</a></li>
+        <li><a href="notas.html">Mis Notas</a></li>
+        <li><a href="../index.html">Cerrar sesión</a></li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <h1>Bienvenido, Juan Pérez</h1>
+      <p>Panel de control del sistema académico</p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Actividad Reciente</h3>
+          <ul>
+            <li>Nuevo estudiante registrado <span>Hace 5 min</span></li>
+            <li>Notas actualizadas <span>Hace 1 hora</span></li>
+            <li>Curso creado <span>Hace 2 horas</span></li>
+            <li>Matrícula completada <span>Hace 3 horas</span></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Accesos Rápidos</h3>
+          <button class="btn" onclick="window.location.href = 'notas.html'">
+            Mis Notas
+          </button>
+          <p class="estado">Activo - 5 cursos matriculados</p>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Mis Notas</h3>
+
+          <div class="stats">
+            <div class="stat">
+              <h4>Promedio</h4>
+              <p>85.8</p>
+            </div>
+
+            <div class="stat">
+              <h4>Créditos</h4>
+              <p>14 / 17</p>
+            </div>
+
+            <div class="stat">
+              <h4>Cursos</h4>
+              <p>5</p>
+            </div>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Curso</th>
+                <th>Docente</th>
+                <th>Créditos</th>
+                <th>Nota</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>MAT101</td>
+                <td>Matemáticas I</td>
+                <td>Prof. García</td>
+                <td>4</td>
+                <td>85</td>
+                <td class="aprobado">Aprobado</td>
+              </tr>
+
+              <tr>
+                <td>FIS101</td>
+                <td>Física I</td>
+                <td>Prof. Martínez</td>
+                <td>4</td>
+                <td>78</td>
+                <td class="aprobado">Aprobado</td>
+              </tr>
+
+              <tr>
+                <td>QUI101</td>
+                <td>Química</td>
+                <td>Prof. Rodríguez</td>
+                <td>3</td>
+                <td>-</td>
+                <td class="pendiente">Pendiente</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

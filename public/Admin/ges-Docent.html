@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Panel Administrador</title>
+    <link rel="stylesheet" href="ges-estudian.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h3>Sistema Academico</h3>
+      <h2>Administrador</h2>
+      <hr class="Linea"></hr>
+      <ul>
+          <li><img src="../icons/icon1_dashboard.png" alt=""><a href="dashboard.html">Dashboard</a></li>
+          <li><img src="../icons/icon2_students.png" alt=""><a href="ges-estudian.html">Gestionar Estudiantes</a></li>
+          <li><img src="../icons/icon3_docente.png" alt=""><a href="ges-Docent.html">Gestionar Docentes</a></li>
+          <li><img src="../icons/icon_book_final.png" alt=""><a href="ges-curso.html">Gestionar Cursos</a></li>
+          <li><img src="../icons/icon5_matricula.png" alt=""><a href="ges-matricula.html">Matrículas</a></li>
+          <li><img src="../icons/icon_logout.png" alt=""><a href="../index.html">Cerrar sesión</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+      <h1>Gestión de Docentes</h1>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Lista de Docentes</h3>
+          <p>Administrar Docentes</p>
+            <div class="herramientas-tabla">
+                <input type="text" id="inputBusqueda" placeholder="Buscar docente...">
+                <button id="Agregar-estud">+ Agregar Docente</button>
+            </div>
+
+          <table id="tabla-estudiantes">
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Telefono</th>
+                    <th>Especialidad</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-cuerpo">
+                <tr>
+                    <td>EST1</td>
+                    <td>Sergio Marco</td>
+                    <td>SergioM@gmail.com</td>
+                    <td>124-434-789</td>
+                    <td>Comunicaciones</td>
+                    <td id="Estado-columna"><span class="estado">Activo</span></td>
+                    <td>
+                        <button onclick="editarDocente(1)"><img src="../icons/icon_lapiz_negro.png" alt=""></button>
+                        <button onclick="eliminarDocente(1)"><img src="../icons/icon_basura.png" alt=""></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>EST1</td>
+                    <td>Matias Brawni</td>
+                    <td>SergioM@gmail.com</td>
+                    <td>124-434-789</td>
+                    <td>Comunicaciones</td>
+                    <td id="Estado-columna"><span class="estado">Activo</span></td>
+                    <td>
+                        <button onclick="editarDocente(1)"><img src="../icons/icon_lapiz_negro.png" alt=""></button>
+                        <button onclick="eliminarDocente(1)"><img src="../icons/icon_basura.png" alt=""></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>EST1</td>
+                    <td>Jose Diaz</td>
+                    <td>SergioM@gmail.com</td>
+                    <td>124-434-789</td>
+                    <td>Comunicaciones</td>
+                    <td id="Estado-columna"><span class="estado">Activo</span></td>
+                    <td>
+                        <button onclick="editarDocente(1)"><img src="../icons/icon_lapiz_negro.png" alt=""></button>
+                        <button onclick="eliminarDocente(1)"><img src="../icons/icon_basura.png" alt=""></button>
+                    </td>
+                </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div id="Overley">
+        <div id="Ventana-Modal">
+          <button id="Cerrarmod">&times;</button>
+          <h2>Registro Nuevo Docente</h2>
+          <p>*Completa los Datos del docente*</p>
+          <p>Codigo: se genera de manera automatica</p>
+          <p>Nombre Completo:</p>
+          <input type="text" id="nombre">
+          <p>Correo:</p>
+          <input type="email" id="correo">
+          <p>Telefono:</p>
+          <input type="text" id="telefono">
+          <p>Especialidad:</p>
+          <input type="text" id="especialidad">
+          <p>Estado:</p>
+          <select id="estado">
+            <option value="Activo">Activo</option>
+            <option value="Inactivo">Inactivo</option>
+          </select>
+          <div class="modal-botones">
+            <button id="Cancelar">Cancelar</button>
+            <button id="Registro">Registro</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="Overley-Editar">
+        <div id="Ventana-Modal">
+          <button id="Cerraredit">&times;</button>
+          <h2>Editar Docentes</h2>
+          <p>*Cambia los Datos del docente*</p>
+          <p>Código: IRREMPLAZABLE Y UNICO</p>
+          <p>Nombre Completo:</p>
+          <input type="text" id="nombre-edit">
+          <p>Especialidad:</p>
+          <input type="text" id="especialidad-edit">
+          <p>Correo:</p>
+          <input type="email" id="correo-edit">
+          <p>Teléfono:</p>
+          <input type="text" id="telefono-edit">
+          <p>Estado:</p>
+          <select id="estado-edit">
+            <option value="Activo">Activo</option>
+            <option value="Inactivo">Inactivo</option>
+          </select>
+          <div class="modal-botones">
+            <button id="Cancelar-Edit">Cancelar</button>
+            <button id="Editar">Editar</button>
+          </div>
+        </div>
+    
+        <script src="dashboard.js"></script>
+    <script src="admin.js"></script>
+    <script src="docent.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,290 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  display: flex;
+  background: #f4f6f9;
+}
+
+.sidebar {
+  width: 220px;
+  background: #043e94;
+  color: white;
+  min-height: 120vh;
+  padding: 20px;
+}
+
+.sidebar h3,
+h2 {
+  text-align: center;
+  margin-top: -3px;
+  padding: 0px;
+}
+
+.Linea {
+  border-style: none;
+  background-color: #144bb3;
+  height: 2.5px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 13px;
+}
+
+.sidebar ul a {
+  list-style: none;
+  display: block;
+  width: 200%;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.sidebar li img {
+  width: 33px;
+  margin-right: 10px;
+}
+
+.sidebar li:hover {
+  background: #1d55be;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.sidebar li:hover a {
+  color: white;
+}
+
+.main {
+  flex: 1;
+  padding: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.card {
+  display: flexbox;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  border-collapse: separate;
+  width: 100%;
+  text-align: left;
+  border-spacing: 0px 20px;
+}
+
+tbody {
+  width: 100%;
+}
+
+#tabla-cuerpo td {
+  background-color: white; /* O el color que prefieras */
+  border-top: 1.5px solid #6b6b6b77; /* Borde arriba */
+  padding-bottom: 1px;
+  padding-top: 16px;
+}
+
+.herramientas-tabla {
+  display: flex;
+  width: 100%;
+  border: none;
+}
+
+.herramientas-tabla input {
+  padding: 8px 15px;
+  width: 30%;
+  background: #ececec;
+  border: none;
+  border-radius: 5px;
+  border: 3px solid #ececec;
+}
+
+input:focus {
+  outline: none;
+  border-color: #043e94;
+}
+
+.estado {
+  background-color: #000000; /* Fondo negro */
+  color: #ffffff; /* Azul brillante (estilo neón) */
+  padding: 5px 20px; /* Espaciado: 5px arriba/abajo, 20px lados */
+  border-radius: 10px; /* Hace que sea totalmente redondo en las puntas */
+  font-weight: bold; /* Texto en negrita */
+  font-size: 14px; /* Tamaño de letra */
+  display: inline-block;
+}
+
+#Estado-columna {
+  display: flex;
+  vertical-align: middle;
+}
+
+button {
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button img {
+  width: 30px;
+}
+
+#Agregar-estud {
+  margin-left: auto;
+  background-color: #144bb3;
+  color: white;
+}
+
+#Overley {
+  position: fixed;
+  display: flex;
+  background-color: #00000075;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  display: none;
+}
+#Overley-Editar {
+  position: fixed;
+  display: flex;
+  background-color: #00000075;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  display: none;
+}
+
+#Ventana-Modal {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 610px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 13px;
+}
+
+#Ventana-Modal #Cerrarmod {
+  margin-left: auto;
+  width: 10px;
+}
+
+#Ventana-Modal input {
+  width: 41vh auto;
+  padding: 2px 10px;
+  background-color: #e2e2e2;
+  border: none;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+#Cerraredit {
+  margin-left: auto;
+  width: 10px;
+}
+
+#Ventana-Modal P,
+h2 {
+  text-align: start;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.modal-botones {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+#Ventana-Modal select {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 14px;
+  margin-bottom: 5px;
+  border: none;
+  height: 39px;
+  border-radius: 8px;
+}
+
+#Cancelar,
+#Registro {
+  display: inline-block;
+  padding: 9px 10px;
+  width: 19%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#Cancelar {
+  border: 1px solid #000000;
+  border-radius: 10px;
+}
+#Registro {
+  background-color: #1d60db;
+  color: white;
+  border-radius: 10px;
+  border: none;
+}
+#Registro:hover {
+  background-color: #062e79;
+  transition: background-color 0.3s;
+}
+#Cancelar:hover {
+  background-color: #96969693;
+  color: rgb(0, 0, 0);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+#Cancelar-Edit,
+#Editar {
+  display: inline-block;
+  padding: 9px 10px;
+  width: 19%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#Cancelar-Edit {
+  border: 1px solid #000000;
+  border-radius: 10px;
+}
+#Cancelar-Edit:hover {
+  background-color: #96969693;
+  color: rgb(0, 0, 0);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+#Editar {
+  background-color: #1d60db;
+  color: white;
+  border-radius: 10px;
+  border: none;
+}
+#Editar:hover {
+  background-color: #062e79;
+  transition: background-color 0.3s;
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Estudiantes</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h3>Sistema Academico</h3>
+      <h2>Prof. García</h2>
+      <hr class="Linea" />
+      <ul>
+        <li><a href="docente.html">Dashboard</a></li>
+        <li><a href="estudiante.html">Estudiantes</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+        <li><a href="asistencia.html">Asistencia</a></li>
+        <li><a href="registro.html">Registro de Notas</a></li>
+        <li><a href="../index.html">Cerrar sesión</a></li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <h1>Gestión de Estudiantes</h1>
+      <p class="subtitle">Administra la información de los estudiantes</p>
+
+      <div class="card">
+        <div class="top-bar">
+          <h3>Lista de Estudiantes</h3>
+          <button class="btn">+ Registrar Estudiante</button>
+        </div>
+
+        <input class="search" type="text" placeholder="Buscar..." />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Nombre</th>
+              <th>Correo</th>
+              <th>Teléfono</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>EST001</td>
+              <td>Juan Pérez</td>
+              <td>juan@email.com</td>
+              <td>555-0001</td>
+              <td><span class="badge activo">Activo</span></td>
+              <td class="acciones">
+                <button class="btn-editar">Editar</button>
+                <button class="btn-eliminar">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

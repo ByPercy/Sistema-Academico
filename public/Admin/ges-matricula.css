@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  display: flex;
+  background: #f4f6f9;
+}
+
+.sidebar {
+  width: 220px;
+  background: #043e94;
+  color: white;
+  min-height: 120vh;
+  padding: 20px;
+}
+
+.sidebar h3,
+h2 {
+  text-align: center;
+  margin-top: -3px;
+  padding: 0px;
+}
+
+.Linea {
+  border-style: none;
+  background-color: #144bb3;
+  height: 2.5px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 13px;
+}
+
+.sidebar ul a {
+  list-style: none;
+  display: block;
+  width: 200%;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.sidebar li img {
+  width: 33px;
+  margin-right: 10px;
+}
+
+.sidebar li:hover {
+  background: #1d55be;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.sidebar li:hover a {
+  color: white;
+}
+
+.main {
+  flex: 1;
+  padding: 30px;
+}
+
+.cards2 {
+  grid-template-columns: 500px 1fr;
+
+  display: grid;
+  gap: 20px;
+}
+
+.card2 {
+  background: white;
+  padding: 20px;
+  height: 100%;
+  margin-top: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#btn-matricular {
+  padding: 8px 15px;
+  background: #255aa8;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+span {
+  background-color: #000000;
+}
+
+#select-estud,
+#select-curso {
+  padding: 3px 10px;
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 8px;
+}
+
+table {
+  border-collapse: separate;
+  width: 100%;
+  text-align: left;
+  border-spacing: 0px 20px;
+}
+
+tbody {
+  width: 100%;
+}
+
+#tabla-cuerpo td {
+  background-color: white; /* O el color que prefieras */
+  border-top: 1.5px solid #6b6b6b77; /* Borde arriba */
+  padding-bottom: 1px;
+  padding-top: 16px;
+}
+
+.herramientas-tabla {
+  width: 100%;
+  border: none;
+}
+
+.herramientas-tabla input {
+  padding: 8px 15px;
+  width: 30%;
+  background: #ececec;
+  border: none;
+  border-radius: 5px;
+  border: 3px solid #ececec;
+}
+
+input:focus {
+  outline: none;
+  border-color: #043e94;
+}
+
+.estado {
+  background-color: #000000; /* Fondo negro */
+  color: #ffffff; /* Azul brillante (estilo neón) */
+  padding: 5px 20px; /* Espaciado: 5px arriba/abajo, 20px lados */
+  border-radius: 10px; /* Hace que sea totalmente redondo en las puntas */
+  font-weight: bold; /* Texto en negrita */
+  font-size: 14px; /* Tamaño de letra */
+  display: inline-block;
+}
+
+#Estado-columna {
+  display: flex;
+  vertical-align: middle;
+}
+
+#btn-editar,
+#btn-eliminar {
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button img {
+  width: 30px;
+}
